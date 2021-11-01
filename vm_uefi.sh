@@ -24,7 +24,6 @@ pacstrap /mnt base linux-zen linux-firmware vim
 echo "Installed zen kernel and linux firmware."
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt bash <(https://raw.githubusercontent.com/nsgwick/ArchScripts/main/vm_uefi_chroot_script.sh)
-exit
 umount -R /mnt
 reboot
 
