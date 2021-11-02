@@ -17,7 +17,7 @@ mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 echo "Mounted the filesystem."
-pacstrap /mnt base linux-zen linux-firmware vim
+pacstrap /mnt base linux-zen linux-firmware dhcpcd vim
 echo "Installed zen kernel and linux firmware."
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/vm_uefi_chroot_script.sh)
