@@ -11,6 +11,8 @@ echo "Time and language set."
 # Set system details
 echo -n "Choose a device name (hostname): " && read && echo $REPLY > /etc/hostname
 echo "Set the root password." && passwd
+echo -n "Choose a username: " && read uname && useradd -m -G wheel $uname
+echo -n "Set the password for $uname." && passwd $
 # Install GRUB bootloader
 mkdir efi
 mount /dev/sda1 /efi
