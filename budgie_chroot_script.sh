@@ -23,4 +23,5 @@ curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.png > 
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
-systemctl enable dhcpcd
+# Enable what needs to be enabled
+systemctl enable dhcpcd gdm
