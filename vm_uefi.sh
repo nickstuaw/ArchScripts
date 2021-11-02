@@ -11,10 +11,7 @@ echo "Intalled gparted."
 # Partition for UEFI
 parted /dev/sda mklabel gpt
 echo "Created a GPT table."
-parted /dev/sda mkpart EFI fat32 1MiB 512MiB
-parted /dev/sda mkpart swap linux-swap 512MiB 1024MiB
-parted /dev/sda set 1 esp on
-parted /dev/sda mkpart rootandfs ext4 1536MiB 100%
+parted /dev/sda mkpart EFI fat32 1MiB 512MiB set 1 esp on mkpart swap linux-swap 512MiB 1024MiB mkpart rootandfs ext4 1536MiB 100%
 mkfs.vfat -F 32 /dev/sda1
 mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
