@@ -18,10 +18,8 @@ mount /dev/sda1 /efi
 pacman -S grub efibootmgr amd-ucode --noconfirm
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-# Download and set the wallpaper
-mkdir /usr/share/backgrounds/nsgw
-curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.png > /usr/share/backgrounds/nsgw/default.png
-gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/nsgw/default.png'
+# Download wallpaper
+curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.png > /usr/share/backgrounds/budgie/default.png
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
