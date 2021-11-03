@@ -20,7 +20,7 @@ mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 echo "Mounted the filesystem."
 # PACKAGES
-pacstrap /mnt base linux-zen linux-firmware dhcpcd sudo vim ufw nvidia pipewire pipewire-alsa pipewire-jack pipewire-pulse xorg-server xorg-apps gdm gnome-desktop mutter budgie-desktop budgie-screensaver gnome-control-center kitty
+pacstrap /mnt base linux-zen linux-firmware dhcpcd sudo vim ufw nvidia pipewire pipewire-alsa pipewire-jack pipewire-pulse xorg-server xorg-apps gdm gnome gnome-desktop budgie-desktop budgie-screensaver gnome-control-center kitty
 echo "Installed zen kernel and linux firmware."
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/budgie_chroot_script.sh)
