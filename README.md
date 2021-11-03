@@ -1,6 +1,7 @@
 # ArchScripts
 My installation scripts for Arch Linux.
-Not yet near finished.
+
+Theming and features are a W.I.P.
 
 ## Using a script
 Just run: `bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/REPLACEWITHSCRIPTNAME.sh)`
