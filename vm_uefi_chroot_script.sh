@@ -1,3 +1,4 @@
+#!/bin/sh
 # Written by Nick (https://github.com/nsgwick (https://nsgw.xyz))
 echo "Chrooted into the new system."
 echo "Created efi mount point."
