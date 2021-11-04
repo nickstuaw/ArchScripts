@@ -1,6 +1,8 @@
 # ArchScripts
 My installation scripts for Arch Linux.
 
+Warning: these scripts obviously may not work on your machine due to device names, storage requirements, etc.
+
 Theming and features are a W.I.P.
 
 ## Using a script
