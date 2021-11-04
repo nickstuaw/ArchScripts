@@ -1,14 +1,12 @@
 #!/bin/sh
 # Written by Nick (https://github.com/nsgwick (https://nsgw.xyz))
 echo "Chrooted into the new system."
-echo "Created efi mount point."
 # Set the local timezone
 ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
 hwclock --systohc
 # Generate the locale
 locale-gen
 localectl set-locale LANG=en_GB.UTF-8
-echo "Time and language set."
 # Set system details
 echo -n "Choose a device name (hostname): " && read && echo $REPLY > /etc/hostname
 echo "Set the root password." && passwd
