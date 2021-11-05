@@ -20,6 +20,8 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 #to-do: Download wallpaper
 #curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.jpg > /usr/share/backgrounds/budgie/default.jpg
+# Download packages
+pacman -S plasma --noconfirm --needed
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
