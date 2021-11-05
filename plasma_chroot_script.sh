@@ -21,10 +21,6 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 #to-do: Download wallpaper
 #curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.jpg > /usr/share/backgrounds/budgie/default.jpg
-# Install Yay
-echo "INSTALLING YAY..."
-git clone https://aur.archlinux.org/yay.git && chown -R $uname yay
-su -c "cd yay && makepkg -si" $uname
 # Prepare pacman
 pacman -Syu
 # Download packages
@@ -34,3 +30,7 @@ dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
 systemctl enable dhcpcd lightdm
+# Install Yay
+echo "INSTALLING YAY..."
+git clone https://aur.archlinux.org/yay.git && chown -R $uname yay
+su -c "cd yay && makepkg -si" $uname
