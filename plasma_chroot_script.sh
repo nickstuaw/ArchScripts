@@ -13,12 +13,6 @@ echo "Set the root password." && passwd
 echo -n "Choose a username: " && read uname && useradd -m -G wheel $uname
 echo "Set the password for $uname." && passwd $uname
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
-cd /home/$uname
-echo "INSTALLING YAY..."
-su -c "git clone https://aur.archlinux.org/yay.git" $uname
-cd yay
-su -c "makepkg -si" $uname
-cd /
 # Install GRUB bootloader
 mkdir efi
 mount /dev/sda1 /efi
@@ -27,6 +21,9 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 #to-do: Download wallpaper
 #curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.jpg > /usr/share/backgrounds/budgie/default.jpg
+# Install Yay
+echo "INSTALLING YAY..."
+su -c "cd ~ && git clone https://aur.archlinux.org/yay.git && makepkg -si" $uname
 # Prepare pacman
 pacman -Syu
 # Download packages
