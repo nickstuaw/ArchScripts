@@ -24,7 +24,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Install Yay
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git && chown -R $uname yay
-cd yay && su -c "makepkg -si" $uname && cd .. && rm -rf yay
+su -c "cd yay && makepkg -si" $uname
 # Prepare pacman
 pacman -Syu
 # Download packages
