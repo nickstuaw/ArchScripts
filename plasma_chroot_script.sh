@@ -21,7 +21,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #to-do: Download wallpaper
 #curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.jpg > /usr/share/backgrounds/budgie/default.jpg
 # Download packages
-pacman -S plasma --noconfirm --needed
+pacman -S plasma-meta konsole yakuake --noconfirm --needed
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
