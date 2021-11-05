@@ -24,12 +24,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -Syu
 # Download packages
 pacman -S plasma-desktop konsole yakuake --noconfirm --needed
-# Install yay AUR helper
-git clone https://github.com/Jguer/yay.git
-cd yay
-makepkg -si
-cd ..
-rm -rf yay
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
