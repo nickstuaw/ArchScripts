@@ -15,7 +15,7 @@ echo "Set the password for $uname." && passwd $uname
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
 cd /home/$uname
 echo "INSTALLING YAY..."
-git clone https://aur.archlinux.org/yay.git
+su -c "git clone https://aur.archlinux.org/yay.git" $uname
 cd yay
 su -c "makepkg -si" $uname
 cd /
