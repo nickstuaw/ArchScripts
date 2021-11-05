@@ -30,6 +30,7 @@ dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
 systemctl enable dhcpcd sddm
+file /etc/systemd/system/display-manager.service
 # Install Yay
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git && chown -R $uname yay
