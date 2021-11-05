@@ -29,7 +29,7 @@ pacman -S plasma-desktop konsole yakuake --noconfirm --needed
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
-systemctl enable dhcpcd lightdm
+systemctl enable dhcpcd sddm
 # Install Yay
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git && chown -R $uname yay
