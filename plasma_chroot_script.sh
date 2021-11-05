@@ -23,7 +23,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.jpg > /usr/share/backgrounds/budgie/default.jpg
 # Install Yay
 echo "INSTALLING YAY..."
-su -c "cd ~ && git clone https://aur.archlinux.org/yay.git && makepkg -si" $uname
+git clone https://aur.archlinux.org/yay.git && chown -R $user yay
+cd yay && su -c "makepkg -si" $uname && cd .. && rm -rf yay
 # Prepare pacman
 pacman -Syu
 # Download packages
