@@ -12,6 +12,7 @@ echo -n "Choose a device name (hostname): " && read && echo $REPLY > /etc/hostna
 echo "Set the root password." && passwd
 echo -n "Choose a username: " && read uname && useradd -m -G wheel $uname
 echo "Set the password for $uname." && passwd $uname
+su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_user_script.sh)" $uname
 # Install GRUB bootloader
 mkdir efi
 mount /dev/sda1 /efi
@@ -20,7 +21,6 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 #to-do: Download wallpaper
 #curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/archlinux.jpg > /usr/share/backgrounds/budgie/default.jpg
-#curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_user_script.sh > /home/$uname/FINAL_INSTALL_RUN_THIS_ONCE.sh
 # Prepare pacman
 pacman -Syu
 # Download packages
