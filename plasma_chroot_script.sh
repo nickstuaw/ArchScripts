@@ -12,6 +12,7 @@ echo -n "Choose a device name (hostname): " && read && echo $REPLY > /etc/hostna
 echo "Set the root password." && passwd
 echo -n "Choose a username: " && read uname && useradd -m -G wheel $uname
 echo "Set the password for $uname." && passwd $uname
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
 su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_user_script.sh)" $uname
 # Install GRUB bootloader
 mkdir efi
