@@ -26,7 +26,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Prepare pacman
 pacman -Syu
 # Download packages
-pacman -S plasma-meta konsole yakuake sddm-kcm --noconfirm
+pacman -S plasma konsole yakuake sddm-kcm --noconfirm
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
