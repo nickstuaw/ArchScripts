@@ -24,12 +24,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Prepare pacman
 pacman -Syu
 # Download packages
-pacman -S plasma-desktop konsole yakuake --noconfirm --needed
+pacman -S plasma konsole yakuake flameshot --noconfirm --needed
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
-systemctl enable dhcpcd sddm
+systemctl enable dhcpcd lightdm
 file /etc/systemd/system/display-manager.service
 # Install Yay
 echo "INSTALLING YAY..."
