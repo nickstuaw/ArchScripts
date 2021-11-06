@@ -26,9 +26,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Prepare pacman
 pacman -Syu
 # Download packages
-pacman -S plasma-desktop konsole yakuake --noconfirm
+pacman -S plasma-meta konsole yakuake sddm-kcm --noconfirm
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
 systemctl enable dhcpcd sddm
+file /etc/systemd/system/display-manager.service
