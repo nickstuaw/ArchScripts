@@ -31,5 +31,4 @@ su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/pl
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
-systemctl enable dhcpcd sddm
-file /etc/systemd/system/display-manager.service
+systemctl enable dhcpcd lightdm
