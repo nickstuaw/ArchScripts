@@ -1,11 +1,9 @@
 # ArchScripts
 My installation scripts for Arch Linux.
 
-Warning: these scripts obviously may not work on your machine due to device names, storage requirements, etc.
-
 Theming and features are a W.I.P.
 
-**`Warning: These scripts target /dev/sda. Check with lsblk or fdisk -l before you run the script. If incompatable, clone or fork the repository and change these values in your chosen script's files.`**
+**`Warning: These scripts target /dev/sda. Check with lsblk or fdisk -l before you run the script. If incompatable, clone or fork the repository and change these values in your chosen script's files. Make sure that you check the storage requirements before installing.`**
 
 ## plasma.sh (Plasma Desktop with Pipewire Audio, Nvidia, and additional packages)
 Recommended storage (minumum) provided for installation: **`> 16 GB`**
