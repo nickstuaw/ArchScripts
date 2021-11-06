@@ -3,6 +3,8 @@ My minimal installation scripts for Arch Linux.
 
 These scripts are currently all experimental. Theming and features are a work-in-progress.
 
+The following scripts work as intended without failure: `plasma.sh`, `budgie.sh`, `vm_uefi.sh`
+
 **`Warning: These scripts target /dev/sda. Check with lsblk or fdisk -l before you run the script. If incompatable, clone or fork the repository and change these values in your chosen script's files. Make sure that you check the storage requirements before installing.`**
 
 ## plasma.sh (Plasma Desktop with Pipewire Audio, Nvidia, and additional packages)
