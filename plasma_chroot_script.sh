@@ -13,8 +13,9 @@ echo "Set the root password." && passwd
 echo -n "Choose a username: " && read uname && useradd -m -G wheel $uname
 echo "Set the password for $uname." && passwd $uname
 # Final user installations
-su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
+# Sudo must work before other installations
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
+su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
 # Install GRUB bootloader
 mkdir efi
 mount /dev/sda1 /efi
@@ -26,7 +27,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Prepare pacman
 pacman -Syu
 # Download packages
-pacman -S plasma konsole yakuake sddm-kcm --noconfirm
+pacman -S plasma --noconfirm
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
