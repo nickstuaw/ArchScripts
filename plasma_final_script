@@ -12,4 +12,4 @@ cd yay
 makepkg -si
 yay -Syu
 echo "INSTALLING ADDITIONAL PACKAGES..."
-yay -S flameshot
+#yay -S ...
