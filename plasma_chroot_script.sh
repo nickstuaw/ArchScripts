@@ -25,10 +25,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -Syu
 # Download packages
 pacman -S plasma konsole yakuake flameshot --noconfirm --needed
+# Final installations
+su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
-systemctl enable dhcpcd lightdm
-# Final installations
-su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
+systemctl enable dhcpcd sddm
+file /etc/systemd/system/display-manager.service
