@@ -6,7 +6,7 @@
 cd ~
 
 # Pacman packages
-sudo pacman -S ark kbackup flameshot discord obs-studio --noconfirm
+sudo pacman -S ark kbackup flameshot discord obs-studio code --noconfirm
 # Install yay
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git
