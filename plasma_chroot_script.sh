@@ -31,4 +31,4 @@ pacman -S plasma-desktop konsole yakuake --noconfirm --needed
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
-systemctl enable dhcpcd lightdm
+systemctl enable dhcpcd sddm
