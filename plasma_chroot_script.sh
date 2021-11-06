@@ -32,3 +32,4 @@ dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
 systemctl enable dhcpcd lightdm
+systemctl set-default multi-user.target
