@@ -24,7 +24,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Prepare pacman
 pacman -Syu
 # Download packages
-pacman -S plasma-meta konsole yakuake flameshot --noconfirm --needed
+pacman -S plasma-desktop konsole yakuake flameshot --noconfirm --needed
 # Final installations
 su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
 # Enable dynamic IP usage
