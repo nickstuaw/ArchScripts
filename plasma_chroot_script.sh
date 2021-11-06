@@ -27,7 +27,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Prepare pacman
 pacman -Syu
 # Download packages
-pacman -S plasma --noconfirm
+pacman -S plasma-meta --noconfirm
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
