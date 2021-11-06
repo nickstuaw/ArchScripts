@@ -6,8 +6,7 @@
 cd ~
 
 # Pacman packages
-sudo pacman -S ark kbackup
-sudo pacman -S flameshot
+sudo pacman -S ark kbackup flameshot --noconfirm
 # Install yay
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git
