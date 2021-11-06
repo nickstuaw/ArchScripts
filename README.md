@@ -12,6 +12,10 @@ Recommended storage (minumum) provided for installation: **`> 16 GB`**
 
 Minimum storage required for installation (not recommended): `~ 8.3 GB`
 
+`lsblk`
+
+`bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma.sh)`
+
 
 # Using a script
 Check that your main storage device is `/dev/sda`: Execute `lsblk` **or** `fdisk -l`
