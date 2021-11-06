@@ -1,6 +1,12 @@
 #!/bin/sh
 # Written by Nick (https://github.com/nsgwick (https://nsgw.xyz))
 # This script includes KDE/Plasma, nvidia and pipewire.
+# #####################################################
+# M I N I M U M   S T O R A G E   R E Q U I R E M E N T
+#
+#                      ~ 8.3 GB
+#
+# #####################################################
 # Use timedatectl to ensure the system clock is accurate: 
 timedatectl set-ntp true
 # Download database files
