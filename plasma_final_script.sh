@@ -12,7 +12,7 @@ sudo pacman -S flameshot
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+echo y | makepkg -si
 yay -Syu
 echo y | yay -S microsoft-edge-stable-bin --noprovides --noremovemake --answeredit 1 --answerclean N --answerdiff N --save
 echo y | yay -S latte-dock
