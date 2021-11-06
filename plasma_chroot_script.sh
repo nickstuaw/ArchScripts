@@ -30,8 +30,5 @@ dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
 systemctl enable dhcpcd lightdm
-file /etc/systemd/system/display-manager.service
-# Install Yay
-echo "INSTALLING YAY..."
-git clone https://aur.archlinux.org/yay.git && chown -R $uname yay
-su -c "cd yay && makepkg -si" $uname
+# Final installations
+su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
