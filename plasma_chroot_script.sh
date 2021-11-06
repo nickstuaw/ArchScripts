@@ -12,6 +12,8 @@ echo -n "Choose a device name (hostname): " && read && echo $REPLY > /etc/hostna
 echo "Set the root password." && passwd
 echo -n "Choose a username: " && read uname && useradd -m -G wheel $uname
 echo "Set the password for $uname." && passwd $uname
+# Final user installations
+su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
 # Install GRUB bootloader
 mkdir efi
@@ -25,11 +27,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -Syu
 # Download packages
 pacman -S plasma-desktop konsole yakuake flameshot --noconfirm --needed
-# Final installations
-su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
 # Enable dynamic IP usage
 dhcpcd -k
 dhcpcd
 # Enable what needs to be enabled
 systemctl enable dhcpcd lightdm
-systemctl set-default multi-user.target
