@@ -15,7 +15,7 @@ echo "Set the password for $uname." && passwd $uname
 # Final user installations
 # Sudo must work before other installations
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
-su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_final_script.sh)" $uname
+su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/college/plasma_final_script.sh)" $uname
 # Install GRUB bootloader
 mkdir efi
 mount /dev/sda1 /efi
