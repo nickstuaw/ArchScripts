@@ -23,6 +23,6 @@ mount /dev/sda3 /mnt
 # PACKAGES
 pacstrap /mnt base base-devel linux-zen linux-firmware nvidia dhcpcd sudo vim git go ufw pipewire pipewire-alsa pipewire-jack pipewire-pulse xorg-server xorg-apps gtk3 sddm sddm-kcm kitty
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/plasma_chroot_script.sh)
+arch-chroot /mnt bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/college/plasma_chroot_script.sh)
 umount -R /mnt
 reboot
