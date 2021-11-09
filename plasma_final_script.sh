@@ -6,7 +6,7 @@
 cd ~
 
 # Pacman packages
-sudo pacman -S ark kbackup flameshot discord obs-studio code dotnet-runtime dotnet-sdk mono --noconfirm
+sudo pacman -S ark kbackup flameshot discord code dotnet-runtime dotnet-sdk mono --noconfirm
 # Install yay
 echo "INSTALLING YAY..."
 git clone https://aur.archlinux.org/yay.git
