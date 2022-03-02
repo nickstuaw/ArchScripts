@@ -18,7 +18,7 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)
 su -c "bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/budgie_final_script.sh)" $uname
 # Install GRUB bootloader
 mkdir efi
-mount /dev/sda1 /efi
+mount /dev/nvme1n1p1 /efi
 pacman -S grub efibootmgr amd-ucode --noconfirm
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
