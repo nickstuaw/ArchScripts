@@ -15,7 +15,7 @@ mkswap /dev/nvme1n1p2
 mkfs.ext4 /dev/nvme1n1p3
 mount /dev/nvme1n1p3 /mnt
 # PACKAGES
-pacstrap /mnt base linux-zen linux-firmware dhcpcd sudo vim ufw nvidia pipewire pipewire-alsa pipewire-jack pipewire-pulse xorg-server xorg-apps gdm budgie-desktop budgie-screensaver gnome-shell gnome-tweaks gnome-control-center kitty
+pacstrap /mnt base base-devel linux-zen linux-firmware dhcpcd sudo vim ufw nvidia pipewire pipewire-alsa pipewire-jack pipewire-pulse xorg-server xorg-apps gdm budgie-desktop budgie-screensaver gnome-shell gnome-tweaks gnome-control-center kitty
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt bash <(curl https://raw.githubusercontent.com/nsgwick/ArchScripts/main/budgie_chroot_script.sh)
 umount -R /mnt
