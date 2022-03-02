@@ -10,7 +10,7 @@ pacman -S parted --noconfirm
 # Partition for UEFI
 parted /dev/nvme1n1 mklabel gpt
 parted /dev/nvme1n1 mkpart EFI fat32 1MiB 512MiB set 1 esp on mkpart swap linux-swap 512MiB 1024MiB mkpart rootandfs ext4 1536MiB 100%
-mkfs.vfat -F 32 /dev/sda1
+mkfs.vfat -F 32 /dev/nvme1n1p1
 mkswap /dev/nvme1n1p2
 mkfs.ext4 /dev/nvme1n1p3
 mount /dev/nvme1n1p3 /mnt
